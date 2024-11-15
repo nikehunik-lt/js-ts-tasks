@@ -9,5 +9,22 @@
  * @returns {number}
  */
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let resultMax = '';
+  let x1 = str1.length;
+  let x2 = str2.length;
+
+  for (let i = 0; i < x1; i++) {
+    for (let j = 0; j < x2; j++) {
+      let result = '';
+      while (str1[i] === str2[j] && i < x1 && j < x2) {
+        result += str1[i];
+        i++;
+        j++;
+      }
+      if (result.length > resultMax.length) {
+        resultMax = result;
+      }
+    }
+  }
+  return resultMax;
 };
