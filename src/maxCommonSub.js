@@ -9,22 +9,15 @@
  * @returns {number}
  */
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
-  let resultMax = '';
-  let x1 = str1.length;
-  let x2 = str2.length;
+  let maxSub = '';
 
-  for (let i = 0; i < x1; i++) {
-    for (let j = 0; j < x2; j++) {
-      let result = '';
-      while (str1[i] === str2[j] && i < x1 && j < x2) {
-        result += str1[i];
-        i++;
-        j++;
-      }
-      if (result.length > resultMax.length) {
-        resultMax = result;
+  for (let i = 0; i < str1.length; i++) {
+    for (let j = i + 1; j <= str1.length; j++) {
+      let sub = str1.substring(i, j);
+      if (str2.includes(sub) && sub.length > maxSub.length) {
+        maxSub = sub;
       }
     }
   }
-  return resultMax;
+  return maxSub;
 };
