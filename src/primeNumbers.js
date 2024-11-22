@@ -7,7 +7,7 @@ module.exports.primeNumbers = function primeNumbers(highestNumber) {
   return function isPrime(x, y) {
     let result = [];
     for (let num = x; num <= y; num++) {
-      var isPrime = true;
+      let isPrime = true;
       if (num < 2) {
         continue;
       }
