@@ -4,5 +4,18 @@
  * @returns Promise
  */
 module.exports.race = function race(promisesArray) {
-  throw new Error('Not implemented'); // remove me and write your code
+  return new Promise((res, rej) => {
+    let i = 0;
+    while (i < promisesArray.length) {
+      promisesArray[i].then(
+        value => {
+          res(value);
+        },
+        reason => {
+          rej(reason);
+        }
+      );
+      i++;
+    }
+  });
 };
