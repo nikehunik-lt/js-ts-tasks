@@ -3,3 +3,183 @@
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
 }
+
+
+
+p,
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  
+}
+
+.design-instagram {
+  padding: 62px 18px 0px 18px;
+  position: relative;
+}
+
+
+
+.first-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name {
+  font: Inter;
+  font-weight: 500;
+}
+
+
+
+.second-part {
+  margin: 18px 0px;
+  display: flex;
+}
+
+.page-information {
+  margin: 26px 0px 26px 15px;
+  display: flex;
+}
+
+.personal-page-information {
+  text-align: center;
+}
+
+
+
+.third-part {
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
+
+
+
+.fourth-part{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+#follow {
+  background-color: #4192EF;
+  border: none;
+}
+
+.button {
+  width: 112px;
+  height: 33px;
+  background-color: black;
+  border: 1px solid #343434;
+  border-radius: 5px;
+  color:white;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+
+
+.fifth-part {
+  width: fit-content;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  row-gap: 5px;
+  align-items: center;     
+}
+
+.highlight__circle {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  width: 74px;
+  box-sizing: border-box;
+  border: 1px solid #505050;
+  padding: 5px;
+}
+
+.highlight__text {
+  text-align: center;
+}
+
+.highlight__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #7B6FC5;
+  border-radius: 50px; 
+}
+
+.highlight__icon img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+
+
+.photos {
+  padding: 0px 10px 0px 10px;
+  position: relative;
+}
+
+
+
+.posts {
+  display: flex;
+  height: 50px;
+  border-top: 1px solid #262626;
+  margin-bottom: 5px;
+}
+
+.your-posts {
+  border-bottom: 2px solid white;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-where-you-are-tagged {
+  width: 50%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+
+.published-posts {
+  display: inline-block;
+  z-index: -1;
+}
+
+.posts-9 {
+  width: 32%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background-color: black;
+  width: 263px;
+  height:50px;
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 13px 36px;
+}
