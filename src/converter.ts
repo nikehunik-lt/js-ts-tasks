@@ -6,5 +6,32 @@
  * @returns {number}
  */
 module.exports.converter = function (value: number, from: string, to: string): number {
-  throw new Error('Not implemented'); // delete this line and write your code
+  type Unit = 'm' | 'mi' | 'gr' | 'pound' | 'C' | 'K';
+
+  const conversionFactors: Record<Unit, number> = {
+    m: 1,
+    mi: 0.621371,
+    gr: 1000,
+    pound: 2.20462,
+    C: 1,
+    K: 1,
+  };
+
+  const temperatureOffset: Record<Unit, number> = {
+    C: 273.15,
+    K: 0,
+    m: 0,
+    mi: 0,
+    gr: 0,
+    pound: 0,
+  };
+
+  if (!conversionFactors.hasOwnProperty(from) || !conversionFactors.hasOwnProperty(to)) {
+    console.error('Invalid units');
+    return undefined;
+  }
+
+  const convertedValue = (value / conversionFactors[from]) * conversionFactors[to] + temperatureOffset[to] - temperatureOffset[from];
+
+  return Number(convertedValue.toFixed(2));
 };
